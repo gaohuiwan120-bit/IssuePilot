@@ -14,6 +14,7 @@ Source of truth: `config/docker-policy.json` (merged over `DEFAULT_DOCKER_POLICY
 | `timeoutMs` | `120000` |
 | `readOnlyRootFilesystem` | `true` |
 | `runAsUser` | `1000:1000` |
+| `writableDirectories` | `/tmp` (tmpfs only; not under repo mount) |
 
 ## Allowlists
 
