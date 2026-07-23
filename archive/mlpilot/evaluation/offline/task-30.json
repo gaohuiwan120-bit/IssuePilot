@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "optimizer_bug",
+    "prompt":  "Diagnose optimizer_bug in fixture 30",
+    "id":  "offline-30",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "optimizer_bug"
+               }
+}

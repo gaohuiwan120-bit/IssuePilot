@@ -1,0 +1,19 @@
+{
+    "suite":  "e2e",
+    "prompt":  "E2E fix bug 5",
+    "id":  "e2e-05",
+    "rubric":  {
+                   "testsMustPass":  true,
+                   "smokeMustPass":  true
+               },
+    "workflow":  [
+                     "DISCOVER",
+                     "DIAGNOSE",
+                     "PLAN",
+                     "APPROVE",
+                     "CHECKPOINT",
+                     "PATCH",
+                     "VALIDATE",
+                     "REPORT"
+                 ]
+}

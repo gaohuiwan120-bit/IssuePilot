@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "dataloader_error",
+    "prompt":  "Diagnose dataloader_error in fixture 18",
+    "id":  "offline-18",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "dataloader_error"
+               }
+}

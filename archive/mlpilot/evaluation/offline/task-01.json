@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "shape_mismatch",
+    "prompt":  "Diagnose shape_mismatch in fixture 1",
+    "id":  "offline-01",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "shape_mismatch"
+               }
+}

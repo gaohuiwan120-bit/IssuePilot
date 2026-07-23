@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "dtype_mismatch",
+    "prompt":  "Diagnose dtype_mismatch in fixture 12",
+    "id":  "offline-12",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "dtype_mismatch"
+               }
+}

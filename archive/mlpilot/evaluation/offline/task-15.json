@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "grad_explosion",
+    "prompt":  "Diagnose grad_explosion in fixture 15",
+    "id":  "offline-15",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "grad_explosion"
+               }
+}

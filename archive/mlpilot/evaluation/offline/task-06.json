@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "import_error",
+    "prompt":  "Diagnose import_error in fixture 6",
+    "id":  "offline-06",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "import_error"
+               }
+}

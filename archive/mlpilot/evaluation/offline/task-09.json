@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "checkpoint_load",
+    "prompt":  "Diagnose checkpoint_load in fixture 9",
+    "id":  "offline-09",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "checkpoint_load"
+               }
+}

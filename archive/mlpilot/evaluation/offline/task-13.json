@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "device_mismatch",
+    "prompt":  "Diagnose device_mismatch in fixture 13",
+    "id":  "offline-13",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "device_mismatch"
+               }
+}

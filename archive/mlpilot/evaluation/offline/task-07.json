@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "cuda_oom",
+    "prompt":  "Diagnose cuda_oom in fixture 7",
+    "id":  "offline-07",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "cuda_oom"
+               }
+}

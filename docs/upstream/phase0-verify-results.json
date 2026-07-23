@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-07-13T08:06:07.313Z",
+  "results": [
+    {
+      "name": "skill-discovery",
+      "status": "ok",
+      "detail": "phase0-test"
+    },
+    {
+      "name": "skill-frontmatter",
+      "status": "ok",
+      "detail": "valid"
+    },
+    {
+      "name": "model-provider",
+      "status": "ok",
+      "detail": "google/gemini-2.0-flash recognized"
+    },
+    {
+      "name": "extension-tool",
+      "status": "ok",
+      "detail": "phase0_ping registered"
+    },
+    {
+      "name": "extension-tool-execute",
+      "status": "ok",
+      "detail": "phase0-pong"
+    },
+    {
+      "name": "read-tool",
+      "status": "ok",
+      "detail": "callable"
+    },
+    {
+      "name": "bash-tool",
+      "status": "ok",
+      "detail": "callable"
+    },
+    {
+      "name": "extension-intercept",
+      "status": "ok",
+      "detail": "phase0-test-extension.ts registers tool_call hook"
+    },
+    {
+      "name": "session-save",
+      "status": "ok",
+      "detail": "E:\\AgentProject\\pi_project\\agent-projects\\mlpilot\\phase0-assets\\_session-runtime\\agent\\2026-07-13T08-06-07-274Z_019f5a83-12a9-78a7-a7a0-252e33499410.jsonl"
+    },
+    {
+      "name": "session-restore",
+      "status": "ok",
+      "detail": "2 entries"
+    },
+    {
+      "name": "session-tree-branch",
+      "status": "ok",
+      "detail": "branch + append"
+    },
+    {
+      "name": "session-compaction-entry",
+      "status": "ok",
+      "detail": "appendCompaction works"
+    }
+  ]
+}

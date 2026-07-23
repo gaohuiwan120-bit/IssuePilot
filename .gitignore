@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+outputs/
+.issuepilot/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+archive/snapshots/

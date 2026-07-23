@@ -1,0 +1,25 @@
+{
+  "name": "issuepilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "IssuePilot: GitHub Issue repair and code review agent on Pi",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/*.test.js",
+    "eval": "node eval/runner.mjs",
+    "eval:offline": "node eval/runner.mjs --suite offline",
+    "eval:e2e": "node eval/runner.mjs --suite e2e"
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "file:../pi-upstream/packages/coding-agent",
+    "typebox": "1.1.38"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "typescript": "5.8.3"
+  }
+}

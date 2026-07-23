@@ -1,0 +1,10 @@
+{
+    "suite":  "offline",
+    "category":  "nan_loss",
+    "prompt":  "Diagnose nan_loss in fixture 14",
+    "id":  "offline-14",
+    "rubric":  {
+                   "maxSteps":  15,
+                   "mustIdentifyCategory":  "nan_loss"
+               }
+}

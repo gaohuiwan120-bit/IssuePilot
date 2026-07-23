@@ -1,0 +1,23 @@
+# MLPilot Plain Docker baseline (aligned with deepflow mirror strategy)
+# Pre-pull if Docker Hub blocked:
+#   docker pull docker.m.daocloud.io/library/node:24-bookworm-slim
+#   docker tag docker.m.daocloud.io/library/node:24-bookworm-slim node:24-bookworm-slim
+FROM node:24-bookworm-slim
+
+ARG APT_MIRROR=mirrors.aliyun.com
+ARG NPM_REGISTRY=https://registry.npmmirror.com
+
+RUN if [ -n "$APT_MIRROR" ]; then \
+      sed -i "s|deb.debian.org|${APT_MIRROR}|g" /etc/apt/sources.list.d/debian.sources 2>/dev/null || true; \
+      sed -i "s|deb.debian.org|${APT_MIRROR}|g" /etc/apt/sources.list 2>/dev/null || true; \
+    fi \
+  && apt-get update \
+  && apt-get install -y --no-install-recommends bash ca-certificates git ripgrep \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN npm config set registry ${NPM_REGISTRY} \
+  && npm install -g --ignore-scripts @earendil-works/pi-coding-agent \
+  && npm config delete registry
+
+WORKDIR /workspace
+ENTRYPOINT ["pi"]

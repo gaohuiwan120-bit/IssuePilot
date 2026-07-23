@@ -1,0 +1,10 @@
+{
+  "extensions": [
+    "../extensions/workflow-controller.ts",
+    "../extensions/permission-gate.ts",
+    "../extensions/git-checkpoint.ts",
+    "../extensions/docker-executor.ts",
+    "../extensions/run-recorder.ts"
+  ],
+  "skills": []
+}
