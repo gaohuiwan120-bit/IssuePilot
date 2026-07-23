@@ -1,0 +1,17 @@
+{
+  "taskId": "golden-spec",
+  "title": "Feature: document hello",
+  "issueType": "documentation",
+  "description": "Documentation task for hello module.",
+  "expectedBehavior": null,
+  "actualBehavior": null,
+  "reproductionSteps": [],
+  "acceptanceCriteria": [
+    "README mentions hello"
+  ],
+  "mentionedFiles": [],
+  "mentionedSymbols": [],
+  "missingInformation": [
+    "expectedBehavior"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "taskId": "golden-spec",
+  "title": "parse_int does not handle ValueError",
+  "issueType": "bug",
+  "description": "`parse_int` in `app/parse.py` crashes on bad input.",
+  "expectedBehavior": "Returns None on invalid int",
+  "actualBehavior": "Traceback ValueError",
+  "reproductionSteps": [
+    "python -m pytest -q"
+  ],
+  "acceptanceCriteria": [],
+  "mentionedFiles": [
+    "app/parse.py",
+    "`app/parse.py",
+    "\"app/parse.py"
+  ],
+  "mentionedSymbols": [
+    "int",
+    "parse_int"
+  ],
+  "missingInformation": [
+    "acceptanceCriteria"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "node-config-bug",
+  "type": "module",
+  "scripts": {
+    "test": "node test/config.test.js"
+  }
+}

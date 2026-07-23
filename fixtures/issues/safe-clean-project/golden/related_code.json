@@ -1,0 +1,84 @@
+[
+  {
+    "filePath": "ISSUE.md",
+    "matchReasons": [
+      "content keyword: Feature",
+      "content keyword: document",
+      "content keyword: hello",
+      "content keyword: Documentation",
+      "content keyword: task",
+      "content keyword: module.",
+      "content keyword: README",
+      "content keyword: mentions"
+    ],
+    "relevanceScore": 64
+  },
+  {
+    "filePath": "golden/issue_spec.parsed.json",
+    "matchReasons": [
+      "content keyword: Feature",
+      "content keyword: document",
+      "content keyword: hello",
+      "content keyword: Documentation",
+      "content keyword: task",
+      "content keyword: module.",
+      "content keyword: README",
+      "content keyword: mentions"
+    ],
+    "relevanceScore": 64
+  },
+  {
+    "filePath": "golden/issue_spec.json",
+    "matchReasons": [
+      "content keyword: Feature",
+      "content keyword: document",
+      "content keyword: hello",
+      "content keyword: Documentation",
+      "content keyword: task"
+    ],
+    "relevanceScore": 40
+  },
+  {
+    "filePath": "README.md",
+    "matchReasons": [
+      "content keyword: hello",
+      "path keyword: README"
+    ],
+    "relevanceScore": 23
+  },
+  {
+    "filePath": "test/hello.test.js",
+    "matchReasons": [
+      "path keyword: hello"
+    ],
+    "relevanceScore": 15
+  },
+  {
+    "filePath": "src/hello.js",
+    "matchReasons": [
+      "path keyword: hello"
+    ],
+    "relevanceScore": 15
+  },
+  {
+    "filePath": "package.json",
+    "matchReasons": [
+      "content keyword: hello"
+    ],
+    "relevanceScore": 8
+  },
+  {
+    "filePath": "reproduce.json",
+    "matchReasons": [
+      "content keyword: hello"
+    ],
+    "relevanceScore": 8
+  },
+  {
+    "filePath": "golden/repository_inventory.json",
+    "matchReasons": [
+      "content keyword: task"
+    ],
+    "relevanceScore": 8
+  }
+]

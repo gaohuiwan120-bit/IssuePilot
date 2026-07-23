@@ -1,0 +1,26 @@
+{
+  "taskId": "golden-spec",
+  "title": "TypeScript build fails on bad type",
+  "issueType": "bug",
+  "description": "`src/math.ts` / `src/math.js` `add` returns wrong type.",
+  "expectedBehavior": "add(1,2)===3 and build succeeds",
+  "actualBehavior": "tests fail and build exits non-zero",
+  "reproductionSteps": [
+    "node test/math.test.js",
+    "npm run build"
+  ],
+  "acceptanceCriteria": [],
+  "mentionedFiles": [
+    "src/math.ts",
+    "src/math.js",
+    "test/math.test.js",
+    "`src/math.ts",
+    "`src/math.js"
+  ],
+  "mentionedSymbols": [
+    "add"
+  ],
+  "missingInformation": [
+    "acceptanceCriteria"
+  ]
+}

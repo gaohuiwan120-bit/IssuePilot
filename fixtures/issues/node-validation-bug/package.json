@@ -1,0 +1,7 @@
+{
+  "name": "node-validation-bug",
+  "type": "module",
+  "scripts": {
+    "test": "node test/validate.test.js"
+  }
+}

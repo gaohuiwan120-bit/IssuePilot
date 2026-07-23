@@ -1,0 +1,9 @@
+{
+  "name": "safe-clean-project",
+  "type": "module",
+  "scripts": {
+    "test": "node test/hello.test.js",
+    "build": "node -e \"console.log('build ok')\"",
+    "lint": "node -e \"console.log('lint ok')\""
+  }
+}

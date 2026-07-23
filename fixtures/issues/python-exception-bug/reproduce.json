@@ -1,0 +1,8 @@
+{
+  "commands": [["python", "tests/run_parse.py"]],
+  "expectedFailure": {
+    "exitCode": 1,
+    "stdoutPattern": "FAIL parse_int|ValueError"
+  },
+  "image": "issuepilot-python:local"
+}

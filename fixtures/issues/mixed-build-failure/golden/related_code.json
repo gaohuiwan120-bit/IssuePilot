@@ -1,0 +1,172 @@
+[
+  {
+    "filePath": "ISSUE.md",
+    "symbol": "add",
+    "lineStart": 4,
+    "lineEnd": 4,
+    "matchReasons": [
+      "symbol: add",
+      "content keyword: TypeScript",
+      "content keyword: build",
+      "content keyword: fails",
+      "content keyword: bad",
+      "content keyword: type",
+      "content keyword: src/math.ts",
+      "content keyword: src/math.js",
+      "content keyword: add",
+      "content keyword: returns",
+      "content keyword: wrong",
+      "content keyword: type.",
+      "content keyword: tests",
+      "content keyword: fail",
+      "content keyword: exits",
+      "content keyword: non-zero",
+      "content keyword: succeeds",
+      "content keyword: node",
+      "content keyword: test/math.test.js",
+      "content keyword: npm",
+      "content keyword: run"
+    ],
+    "relevanceScore": 180
+  },
+  {
+    "filePath": "golden/issue_spec.parsed.json",
+    "symbol": "add",
+    "lineStart": 5,
+    "lineEnd": 5,
+    "matchReasons": [
+      "symbol: add",
+      "content keyword: TypeScript",
+      "content keyword: build",
+      "content keyword: fails",
+      "content keyword: bad",
+      "content keyword: type",
+      "content keyword: src/math.ts",
+      "content keyword: src/math.js",
+      "content keyword: add",
+      "content keyword: returns",
+      "content keyword: wrong",
+      "content keyword: type.",
+      "content keyword: tests",
+      "content keyword: fail",
+      "content keyword: exits",
+      "content keyword: non-zero",
+      "content keyword: succeeds",
+      "content keyword: node",
+      "content keyword: test/math.test.js",
+      "content keyword: npm",
+      "content keyword: run"
+    ],
+    "relevanceScore": 180
+  },
+  {
+    "filePath": "test/math.test.js",
+    "symbol": "add",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: test/math.test.js",
+      "symbol: add",
+      "content keyword: src/math.js",
+      "content keyword: add",
+      "content keyword: fail",
+      "path keyword: test/math.test.js"
+    ],
+    "relevanceScore": 109
+  },
+  {
+    "filePath": "src/math.js",
+    "symbol": "add",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: src/math.js",
+      "symbol: add",
+      "path keyword: src/math.js",
+      "content keyword: add"
+    ],
+    "relevanceScore": 93
+  },
+  {
+    "filePath": "src/math.ts",
+    "symbol": "add",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: src/math.ts",
+      "symbol: add",
+      "path keyword: src/math.ts",
+      "content keyword: add"
+    ],
+    "relevanceScore": 93
+  },
+  {
+    "filePath": "golden/fixed/src/math.js",
+    "symbol": "add",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: src/math.js",
+      "symbol: add",
+      "path keyword: src/math.js",
+      "content keyword: add"
+    ],
+    "relevanceScore": 93
+  },
+  {
+    "filePath": "golden/issue_spec.json",
+    "symbol": "add",
+    "lineStart": 10,
+    "lineEnd": 10,
+    "matchReasons": [
+      "symbol: add",
+      "content keyword: TypeScript",
+      "content keyword: build",
+      "content keyword: fails",
+      "content keyword: bad",
+      "content keyword: type",
+      "content keyword: src/math.ts",
+      "content keyword: src/math.js",
+      "content keyword: add",
+      "content keyword: fail"
+    ],
+    "relevanceScore": 92
+  },
+  {
+    "filePath": "reproduce.json",
+    "symbol": "add",
+    "lineStart": 10,
+    "lineEnd": 10,
+    "matchReasons": [
+      "symbol: add",
+      "content keyword: add",
+      "content keyword: fail",
+      "content keyword: node",
+      "content keyword: test/math.test.js"
+    ],
+    "relevanceScore": 52
+  },
+  {
+    "filePath": "golden/repository_inventory.json",
+    "matchReasons": [
+      "content keyword: TypeScript",
+      "content keyword: build",
+      "content keyword: type",
+      "content keyword: node",
+      "content keyword: npm",
+      "content keyword: run"
+    ],
+    "relevanceScore": 48
+  },
+  {
+    "filePath": "package.json",
+    "matchReasons": [
+      "content keyword: build",
+      "content keyword: type",
+      "content keyword: fail",
+      "content keyword: node",
+      "content keyword: test/math.test.js"
+    ],
+    "relevanceScore": 40
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "filePath": "ISSUE.md",
+    "symbol": "validateUser",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "symbol: validateUser",
+      "content keyword: validateUser",
+      "content keyword: throws",
+      "content keyword: empty",
+      "content keyword: email",
+      "content keyword: src/validate.js",
+      "content keyword: accepts",
+      "content keyword: email.",
+      "content keyword: Empty",
+      "content keyword: string",
+      "content keyword: returns",
+      "content keyword: true",
+      "content keyword: should",
+      "content keyword: return",
+      "content keyword: false",
+      "content keyword: error",
+      "content keyword: EMAIL_REQUIRED",
+      "content keyword: Run",
+      "content keyword: node",
+      "content keyword: test/validate.test.js",
+      "content keyword: Observe",
+      "content keyword: failure",
+      "content keyword: rejected",
+      "content keyword: passes"
+    ],
+    "relevanceScore": 204
+  },
+  {
+    "filePath": "golden/issue_spec.parsed.json",
+    "symbol": "validateUser",
+    "lineStart": 3,
+    "lineEnd": 3,
+    "matchReasons": [
+      "symbol: validateUser",
+      "content keyword: validateUser",
+      "content keyword: throws",
+      "content keyword: empty",
+      "content keyword: email",
+      "content keyword: src/validate.js",
+      "content keyword: accepts",
+      "content keyword: email.",
+      "content keyword: Empty",
+      "content keyword: string",
+      "content keyword: returns",
+      "content keyword: true",
+      "content keyword: should",
+      "content keyword: return",
+      "content keyword: false",
+      "content keyword: error",
+      "content keyword: EMAIL_REQUIRED",
+      "content keyword: Run",
+      "content keyword: node",
+      "content keyword: test/validate.test.js",
+      "content keyword: Observe",
+      "content keyword: failure",
+      "content keyword: rejected",
+      "content keyword: passes"
+    ],
+    "relevanceScore": 204
+  },
+  {
+    "filePath": "src/validate.js",
+    "symbol": "validateUser",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: src/validate.js",
+      "symbol: validateUser",
+      "content keyword: validateUser",
+      "content keyword: empty",
+      "content keyword: email",
+      "path keyword: src/validate.js",
+      "content keyword: Empty",
+      "content keyword: string",
+      "content keyword: true",
+      "content keyword: return",
+      "content keyword: false",
+      "content keyword: error",
+      "content keyword: EMAIL_REQUIRED"
+    ],
+    "relevanceScore": 165
+  },
+  {
+    "filePath": "test/validate.test.js",
+    "symbol": "validateUser",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: test/validate.test.js",
+      "symbol: validateUser",
+      "content keyword: validateUser",
+      "content keyword: empty",
+      "content keyword: email",
+      "content keyword: src/validate.js",
+      "content keyword: Empty",
+      "content keyword: false",
+      "content keyword: error",
+      "content keyword: EMAIL_REQUIRED",
+      "path keyword: test/validate.test.js"
+    ],
+    "relevanceScore": 149
+  },
+  {
+    "filePath": "golden/fixed/src/validate.js",
+    "symbol": "validateUser",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: src/validate.js",
+      "symbol: validateUser",
+      "content keyword: validateUser",
+      "content keyword: email",
+      "path keyword: src/validate.js",
+      "content keyword: string",
+      "content keyword: true",
+      "content keyword: return",
+      "content keyword: false",
+      "content keyword: error",
+      "content keyword: EMAIL_REQUIRED"
+    ],
+    "relevanceScore": 149
+  },
+  {
+    "filePath": "golden/issue_spec.json",
+    "symbol": "validateUser",
+    "lineStart": 3,
+    "lineEnd": 3,
+    "matchReasons": [
+      "symbol: validateUser",
+      "content keyword: validateUser",
+      "content keyword: throws",
+      "content keyword: empty",
+      "content keyword: email",
+      "content keyword: src/validate.js",
+      "content keyword: Empty",
+      "content keyword: string",
+      "content keyword: returns",
+      "content keyword: true",
+      "content keyword: should",
+      "content keyword: return",
+      "content keyword: false",
+      "content keyword: error",
+      "content keyword: EMAIL_REQUIRED",
+      "content keyword: node"
+    ],
+    "relevanceScore": 140
+  },
+  {
+    "filePath": "reproduce.json",
+    "symbol": "validateUser",
+    "lineStart": 10,
+    "lineEnd": 10,
+    "matchReasons": [
+      "symbol: validateUser",
+      "content keyword: validateUser",
+      "content keyword: node",
+      "content keyword: test/validate.test.js",
+      "content keyword: failure"
+    ],
+    "relevanceScore": 52
+  },
+  {
+    "filePath": "golden/related.json",
+    "symbol": "validateUser",
+    "lineStart": 4,
+    "lineEnd": 4,
+    "matchReasons": [
+      "symbol: validateUser",
+      "content keyword: validateUser",
+      "content keyword: src/validate.js"
+    ],
+    "relevanceScore": 36
+  },
+  {
+    "filePath": "package.json",
+    "matchReasons": [
+      "content keyword: node",
+      "content keyword: test/validate.test.js"
+    ],
+    "relevanceScore": 16
+  },
+  {
+    "filePath": "golden/repository_inventory.json",
+    "matchReasons": [
+      "content keyword: false",
+      "content keyword: node"
+    ],
+    "relevanceScore": 16
+  }
+]

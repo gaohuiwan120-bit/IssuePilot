@@ -1,0 +1,11 @@
+{
+  "taskId": "fx-python-path",
+  "title": "resolve_data_path joins incorrectly",
+  "issueType": "bug",
+  "mentionedFiles": [
+    "app/paths.py"
+  ],
+  "mentionedSymbols": [
+    "resolve_data_path"
+  ]
+}

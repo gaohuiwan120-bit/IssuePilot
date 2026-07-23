@@ -1,0 +1,11 @@
+{
+  "taskId": "fx-node-config",
+  "title": "Missing config key maxRetries",
+  "issueType": "bug",
+  "mentionedFiles": [
+    "src/config.js"
+  ],
+  "mentionedSymbols": [
+    "loadConfig"
+  ]
+}

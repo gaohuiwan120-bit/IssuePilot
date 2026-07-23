@@ -1,0 +1,8 @@
+{
+  "commands": [["python", "tests/run_paths.py"]],
+  "expectedFailure": {
+    "exitCode": 1,
+    "stdoutPattern": "FAIL resolve_data_path"
+  },
+  "image": "issuepilot-python:local"
+}

@@ -9,3 +9,4 @@ outputs/
 *.log
 *.tmp
 archive/snapshots/
+fixtures/issues/.work/

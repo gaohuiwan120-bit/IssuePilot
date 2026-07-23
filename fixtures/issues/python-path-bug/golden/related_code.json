@@ -1,0 +1,154 @@
+[
+  {
+    "filePath": "ISSUE.md",
+    "symbol": "resolve_data_path",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "symbol: resolve_data_path",
+      "content keyword: resolve_data_path",
+      "content keyword: joins",
+      "content keyword: incorrectly",
+      "content keyword: app/paths.py",
+      "content keyword: ignores",
+      "content keyword: base.",
+      "content keyword: Returns",
+      "content keyword: filename",
+      "content keyword: only",
+      "content keyword: base/filename",
+      "content keyword: joined",
+      "content keyword: path",
+      "content keyword: python",
+      "content keyword: pytest",
+      "content keyword: includes",
+      "content keyword: base"
+    ],
+    "relevanceScore": 148
+  },
+  {
+    "filePath": "golden/issue_spec.parsed.json",
+    "symbol": "resolve_data_path",
+    "lineStart": 3,
+    "lineEnd": 3,
+    "matchReasons": [
+      "symbol: resolve_data_path",
+      "content keyword: resolve_data_path",
+      "content keyword: joins",
+      "content keyword: incorrectly",
+      "content keyword: app/paths.py",
+      "content keyword: ignores",
+      "content keyword: base.",
+      "content keyword: Returns",
+      "content keyword: filename",
+      "content keyword: only",
+      "content keyword: base/filename",
+      "content keyword: joined",
+      "content keyword: path",
+      "content keyword: python",
+      "content keyword: pytest",
+      "content keyword: includes",
+      "content keyword: base"
+    ],
+    "relevanceScore": 148
+  },
+  {
+    "filePath": "app/paths.py",
+    "symbol": "resolve_data_path",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: app/paths.py",
+      "symbol: resolve_data_path",
+      "content keyword: resolve_data_path",
+      "path keyword: app/paths.py",
+      "content keyword: ignores",
+      "path keyword: path",
+      "content keyword: base"
+    ],
+    "relevanceScore": 124
+  },
+  {
+    "filePath": "golden/fixed/app/paths.py",
+    "symbol": "resolve_data_path",
+    "lineStart": 3,
+    "lineEnd": 3,
+    "matchReasons": [
+      "mentioned file: app/paths.py",
+      "symbol: resolve_data_path",
+      "content keyword: resolve_data_path",
+      "path keyword: app/paths.py",
+      "path keyword: path",
+      "content keyword: base"
+    ],
+    "relevanceScore": 116
+  },
+  {
+    "filePath": "golden/issue_spec.json",
+    "symbol": "resolve_data_path",
+    "lineStart": 3,
+    "lineEnd": 3,
+    "matchReasons": [
+      "symbol: resolve_data_path",
+      "content keyword: resolve_data_path",
+      "content keyword: joins",
+      "content keyword: incorrectly",
+      "content keyword: app/paths.py",
+      "content keyword: path",
+      "content keyword: python"
+    ],
+    "relevanceScore": 68
+  },
+  {
+    "filePath": "tests/test_paths.py",
+    "symbol": "resolve_data_path",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "symbol: resolve_data_path",
+      "content keyword: resolve_data_path",
+      "content keyword: joins",
+      "path keyword: path"
+    ],
+    "relevanceScore": 51
+  },
+  {
+    "filePath": "reproduce.json",
+    "symbol": "resolve_data_path",
+    "lineStart": 5,
+    "lineEnd": 5,
+    "matchReasons": [
+      "symbol: resolve_data_path",
+      "content keyword: resolve_data_path",
+      "content keyword: path",
+      "content keyword: python"
+    ],
+    "relevanceScore": 44
+  },
+  {
+    "filePath": "tests/run_paths.py",
+    "symbol": "resolve_data_path",
+    "lineStart": 6,
+    "lineEnd": 6,
+    "matchReasons": [
+      "symbol: resolve_data_path",
+      "content keyword: resolve_data_path",
+      "path keyword: path"
+    ],
+    "relevanceScore": 43
+  },
+  {
+    "filePath": "golden/repository_inventory.json",
+    "matchReasons": [
+      "content keyword: python",
+      "content keyword: pytest"
+    ],
+    "relevanceScore": 16
+  },
+  {
+    "filePath": "requirements.txt",
+    "matchReasons": [
+      "content keyword: pytest"
+    ],
+    "relevanceScore": 8
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "commands": [
+    [
+      "node",
+      "test/hello.test.js"
+    ]
+  ],
+  "expectedFailure": {
+    "exitCode": 1
+  }
+}

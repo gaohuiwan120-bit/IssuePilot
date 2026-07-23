@@ -1,0 +1,22 @@
+{
+  "taskId": "golden-spec",
+  "title": "resolve_data_path joins incorrectly",
+  "issueType": "bug",
+  "description": "`resolve_data_path` in `app/paths.py` ignores base.",
+  "expectedBehavior": "Returns base/filename joined path",
+  "actualBehavior": "Returns filename only",
+  "reproductionSteps": [
+    "python -m pytest -q"
+  ],
+  "acceptanceCriteria": [
+    "joined path includes base"
+  ],
+  "mentionedFiles": [
+    "app/paths.py",
+    "`app/paths.py"
+  ],
+  "mentionedSymbols": [
+    "resolve_data_path"
+  ],
+  "missingInformation": []
+}

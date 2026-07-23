@@ -1,0 +1,12 @@
+{
+  "commands": [
+    [
+      "node",
+      "test/validate.test.js"
+    ]
+  ],
+  "expectedFailure": {
+    "exitCode": 1,
+    "stderrPattern": "FAIL validateUser"
+  }
+}

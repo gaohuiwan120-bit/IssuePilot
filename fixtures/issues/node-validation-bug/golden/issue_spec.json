@@ -1,0 +1,14 @@
+{
+  "taskId": "fx-node-validation",
+  "title": "validateUser throws on empty email",
+  "issueType": "bug",
+  "expectedBehavior": "Empty email should return ok:false with error EMAIL_REQUIRED",
+  "actualBehavior": "Empty string returns ok:true",
+  "mentionedFiles": [
+    "src/validate.js"
+  ],
+  "mentionedSymbols": [
+    "validateUser"
+  ],
+  "missingInformation": []
+}

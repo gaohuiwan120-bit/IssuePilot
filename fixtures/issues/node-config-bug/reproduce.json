@@ -1,0 +1,12 @@
+{
+  "commands": [
+    [
+      "node",
+      "test/config.test.js"
+    ]
+  ],
+  "expectedFailure": {
+    "exitCode": 1,
+    "stderrPattern": "FAIL config"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "taskId": "golden-inv",
+  "projectType": "mixed-node-python",
+  "languages": [
+    "javascript/typescript",
+    "python"
+  ],
+  "frameworks": [
+    "typescript"
+  ],
+  "packageManagers": [
+    "pip"
+  ],
+  "entryPoints": [],
+  "sourceDirectories": [
+    "src"
+  ],
+  "testDirectories": [
+    "test"
+  ],
+  "buildCommands": [
+    "npm run build"
+  ],
+  "testCommands": [
+    "npm test"
+  ],
+  "lintCommands": [
+    "npm run lint"
+  ],
+  "gitStatus": "branch=master dirty=false head=7deb275f"
+}

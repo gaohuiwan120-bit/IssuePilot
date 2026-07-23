@@ -11,3 +11,4 @@ export * from "./security/approval.js";
 export * from "./git/checkpoint.js";
 export * from "./trace/run-recorder.js";
 export * from "./docker/index.js";
+export * from "./tools/index.js";

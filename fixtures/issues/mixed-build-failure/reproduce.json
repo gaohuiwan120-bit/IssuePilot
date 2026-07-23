@@ -1,0 +1,12 @@
+{
+  "commands": [
+    [
+      "node",
+      "test/math.test.js"
+    ]
+  ],
+  "expectedFailure": {
+    "exitCode": 1,
+    "stderrPattern": "FAIL add"
+  }
+}

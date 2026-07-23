@@ -1,0 +1,168 @@
+[
+  {
+    "filePath": "ISSUE.md",
+    "symbol": "loadConfig",
+    "lineStart": 4,
+    "lineEnd": 4,
+    "matchReasons": [
+      "symbol: loadConfig",
+      "content keyword: Missing",
+      "content keyword: config",
+      "content keyword: key",
+      "content keyword: maxRetries",
+      "content keyword: loadConfig",
+      "content keyword: src/config.js",
+      "content keyword: does",
+      "content keyword: not",
+      "content keyword: require",
+      "content keyword: maxRetries.",
+      "content keyword: Returns",
+      "content keyword: without",
+      "content keyword: Throws",
+      "content keyword: CONFIG_MISSING",
+      "content keyword: when",
+      "content keyword: absent",
+      "content keyword: node",
+      "content keyword: test/config.test.js",
+      "content keyword: missing",
+      "content keyword: throws"
+    ],
+    "relevanceScore": 180
+  },
+  {
+    "filePath": "golden/issue_spec.parsed.json",
+    "symbol": "loadConfig",
+    "lineStart": 5,
+    "lineEnd": 5,
+    "matchReasons": [
+      "symbol: loadConfig",
+      "content keyword: Missing",
+      "content keyword: config",
+      "content keyword: key",
+      "content keyword: maxRetries",
+      "content keyword: loadConfig",
+      "content keyword: src/config.js",
+      "content keyword: does",
+      "content keyword: not",
+      "content keyword: require",
+      "content keyword: maxRetries.",
+      "content keyword: Returns",
+      "content keyword: without",
+      "content keyword: Throws",
+      "content keyword: CONFIG_MISSING",
+      "content keyword: when",
+      "content keyword: absent",
+      "content keyword: node",
+      "content keyword: test/config.test.js",
+      "content keyword: missing",
+      "content keyword: throws"
+    ],
+    "relevanceScore": 180
+  },
+  {
+    "filePath": "test/config.test.js",
+    "symbol": "loadConfig",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: test/config.test.js",
+      "symbol: loadConfig",
+      "content keyword: Missing",
+      "path keyword: config",
+      "content keyword: maxRetries",
+      "content keyword: loadConfig",
+      "content keyword: src/config.js",
+      "content keyword: CONFIG_MISSING",
+      "path keyword: test/config.test.js",
+      "content keyword: missing"
+    ],
+    "relevanceScore": 148
+  },
+  {
+    "filePath": "golden/fixed/src/config.js",
+    "symbol": "loadConfig",
+    "lineStart": 2,
+    "lineEnd": 2,
+    "matchReasons": [
+      "mentioned file: src/config.js",
+      "symbol: loadConfig",
+      "content keyword: Missing",
+      "path keyword: config",
+      "content keyword: maxRetries",
+      "content keyword: loadConfig",
+      "path keyword: src/config.js",
+      "content keyword: CONFIG_MISSING",
+      "content keyword: node",
+      "content keyword: missing"
+    ],
+    "relevanceScore": 148
+  },
+  {
+    "filePath": "src/config.js",
+    "symbol": "loadConfig",
+    "lineStart": 2,
+    "lineEnd": 2,
+    "matchReasons": [
+      "mentioned file: src/config.js",
+      "symbol: loadConfig",
+      "content keyword: Missing",
+      "path keyword: config",
+      "content keyword: maxRetries",
+      "content keyword: loadConfig",
+      "path keyword: src/config.js",
+      "content keyword: node",
+      "content keyword: missing"
+    ],
+    "relevanceScore": 140
+  },
+  {
+    "filePath": "golden/issue_spec.json",
+    "symbol": "loadConfig",
+    "lineStart": 9,
+    "lineEnd": 9,
+    "matchReasons": [
+      "symbol: loadConfig",
+      "content keyword: Missing",
+      "content keyword: config",
+      "content keyword: key",
+      "content keyword: maxRetries",
+      "content keyword: loadConfig",
+      "content keyword: src/config.js",
+      "content keyword: node",
+      "content keyword: missing"
+    ],
+    "relevanceScore": 84
+  },
+  {
+    "filePath": "package.json",
+    "matchReasons": [
+      "content keyword: config",
+      "content keyword: node",
+      "content keyword: test/config.test.js"
+    ],
+    "relevanceScore": 24
+  },
+  {
+    "filePath": "reproduce.json",
+    "matchReasons": [
+      "content keyword: config",
+      "content keyword: node",
+      "content keyword: test/config.test.js"
+    ],
+    "relevanceScore": 24
+  },
+  {
+    "filePath": "config/app.json",
+    "matchReasons": [
+      "path keyword: config"
+    ],
+    "relevanceScore": 15
+  },
+  {
+    "filePath": "golden/repository_inventory.json",
+    "matchReasons": [
+      "content keyword: node"
+    ],
+    "relevanceScore": 8
+  }
+]

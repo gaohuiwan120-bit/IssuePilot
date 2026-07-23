@@ -1,0 +1,26 @@
+{
+  "taskId": "golden-inv",
+  "projectType": "python",
+  "languages": [
+    "python"
+  ],
+  "frameworks": [
+    "pytest"
+  ],
+  "packageManagers": [
+    "pip"
+  ],
+  "entryPoints": [],
+  "sourceDirectories": [
+    "app"
+  ],
+  "testDirectories": [
+    "tests"
+  ],
+  "buildCommands": [],
+  "testCommands": [
+    "pytest"
+  ],
+  "lintCommands": [],
+  "gitStatus": "branch=master dirty=false head=b1943565"
+}

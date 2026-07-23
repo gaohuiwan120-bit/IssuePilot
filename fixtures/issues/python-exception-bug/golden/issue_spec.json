@@ -1,0 +1,11 @@
+{
+  "taskId": "fx-python-exception",
+  "title": "parse_int does not handle ValueError",
+  "issueType": "bug",
+  "mentionedFiles": [
+    "app/parse.py"
+  ],
+  "mentionedSymbols": [
+    "parse_int"
+  ]
+}

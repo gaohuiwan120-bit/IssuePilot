@@ -1,0 +1,25 @@
+{
+  "taskId": "golden-spec",
+  "title": "validateUser throws on empty email",
+  "issueType": "bug",
+  "description": "`validateUser` in `src/validate.js` accepts empty email.",
+  "expectedBehavior": "Empty email should return ok:false with error EMAIL_REQUIRED",
+  "actualBehavior": "Empty string returns ok:true",
+  "reproductionSteps": [
+    "Run node test/validate.test.js",
+    "Observe failure EMAIL_REQUIRED"
+  ],
+  "acceptanceCriteria": [
+    "Empty email rejected",
+    "test/validate.test.js passes"
+  ],
+  "mentionedFiles": [
+    "src/validate.js",
+    "test/validate.test.js",
+    "`src/validate.js"
+  ],
+  "mentionedSymbols": [
+    "validateUser"
+  ],
+  "missingInformation": []
+}

@@ -1,0 +1,23 @@
+{
+  "taskId": "golden-spec",
+  "title": "Missing config key maxRetries",
+  "issueType": "bug",
+  "description": "`loadConfig` in `src/config.js` does not require maxRetries.",
+  "expectedBehavior": "Throws CONFIG_MISSING when maxRetries absent",
+  "actualBehavior": "Returns config without maxRetries",
+  "reproductionSteps": [
+    "node test/config.test.js"
+  ],
+  "acceptanceCriteria": [
+    "missing maxRetries throws CONFIG_MISSING"
+  ],
+  "mentionedFiles": [
+    "src/config.js",
+    "test/config.test.js",
+    "`src/config.js"
+  ],
+  "mentionedSymbols": [
+    "loadConfig"
+  ],
+  "missingInformation": []
+}

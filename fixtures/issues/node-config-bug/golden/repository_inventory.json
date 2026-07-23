@@ -1,0 +1,22 @@
+{
+  "taskId": "golden-inv",
+  "projectType": "node",
+  "languages": [
+    "javascript/typescript"
+  ],
+  "frameworks": [],
+  "packageManagers": [],
+  "entryPoints": [],
+  "sourceDirectories": [
+    "src"
+  ],
+  "testDirectories": [
+    "test"
+  ],
+  "buildCommands": [],
+  "testCommands": [
+    "npm test"
+  ],
+  "lintCommands": [],
+  "gitStatus": "branch=master dirty=false head=5f490e05"
+}

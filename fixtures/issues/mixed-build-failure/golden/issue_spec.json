@@ -1,0 +1,12 @@
+{
+  "taskId": "fx-mixed-build",
+  "title": "TypeScript build fails on bad type",
+  "issueType": "bug",
+  "mentionedFiles": [
+    "src/math.ts",
+    "src/math.js"
+  ],
+  "mentionedSymbols": [
+    "add"
+  ]
+}

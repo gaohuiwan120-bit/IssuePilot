@@ -1,0 +1,173 @@
+[
+  {
+    "filePath": "ISSUE.md",
+    "symbol": "int",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "symbol: int",
+      "symbol: parse_int",
+      "content keyword: parse_int",
+      "content keyword: does",
+      "content keyword: not",
+      "content keyword: handle",
+      "content keyword: ValueError",
+      "content keyword: app/parse.py",
+      "content keyword: crashes",
+      "content keyword: bad",
+      "content keyword: input.",
+      "content keyword: Traceback",
+      "content keyword: Returns",
+      "content keyword: None",
+      "content keyword: invalid",
+      "content keyword: int",
+      "content keyword: python",
+      "content keyword: pytest"
+    ],
+    "relevanceScore": 168
+  },
+  {
+    "filePath": "golden/issue_spec.parsed.json",
+    "symbol": "int",
+    "lineStart": 3,
+    "lineEnd": 3,
+    "matchReasons": [
+      "symbol: int",
+      "symbol: parse_int",
+      "content keyword: parse_int",
+      "content keyword: does",
+      "content keyword: not",
+      "content keyword: handle",
+      "content keyword: ValueError",
+      "content keyword: app/parse.py",
+      "content keyword: crashes",
+      "content keyword: bad",
+      "content keyword: input.",
+      "content keyword: Traceback",
+      "content keyword: Returns",
+      "content keyword: None",
+      "content keyword: invalid",
+      "content keyword: int",
+      "content keyword: python",
+      "content keyword: pytest"
+    ],
+    "relevanceScore": 168
+  },
+  {
+    "filePath": "golden/fixed/app/parse.py",
+    "symbol": "int",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: app/parse.py",
+      "symbol: int",
+      "symbol: parse_int",
+      "content keyword: parse_int",
+      "content keyword: ValueError",
+      "path keyword: app/parse.py",
+      "content keyword: None",
+      "content keyword: int"
+    ],
+    "relevanceScore": 137
+  },
+  {
+    "filePath": "app/parse.py",
+    "symbol": "int",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "mentioned file: app/parse.py",
+      "symbol: int",
+      "symbol: parse_int",
+      "content keyword: parse_int",
+      "path keyword: app/parse.py",
+      "content keyword: int"
+    ],
+    "relevanceScore": 121
+  },
+  {
+    "filePath": "golden/issue_spec.json",
+    "symbol": "int",
+    "lineStart": 3,
+    "lineEnd": 3,
+    "matchReasons": [
+      "symbol: int",
+      "symbol: parse_int",
+      "content keyword: parse_int",
+      "content keyword: does",
+      "content keyword: not",
+      "content keyword: handle",
+      "content keyword: ValueError",
+      "content keyword: app/parse.py",
+      "content keyword: int",
+      "content keyword: python"
+    ],
+    "relevanceScore": 104
+  },
+  {
+    "filePath": "tests/run_parse.py",
+    "symbol": "int",
+    "lineStart": 6,
+    "lineEnd": 6,
+    "matchReasons": [
+      "symbol: int",
+      "symbol: parse_int",
+      "content keyword: parse_int",
+      "content keyword: not",
+      "content keyword: bad",
+      "content keyword: None",
+      "content keyword: int"
+    ],
+    "relevanceScore": 80
+  },
+  {
+    "filePath": "reproduce.json",
+    "symbol": "int",
+    "lineStart": 5,
+    "lineEnd": 5,
+    "matchReasons": [
+      "symbol: int",
+      "symbol: parse_int",
+      "content keyword: parse_int",
+      "content keyword: ValueError",
+      "content keyword: int",
+      "content keyword: python"
+    ],
+    "relevanceScore": 72
+  },
+  {
+    "filePath": "tests/test_parse.py",
+    "symbol": "int",
+    "lineStart": 1,
+    "lineEnd": 1,
+    "matchReasons": [
+      "symbol: int",
+      "symbol: parse_int",
+      "content keyword: parse_int",
+      "content keyword: bad",
+      "content keyword: None",
+      "content keyword: int"
+    ],
+    "relevanceScore": 72
+  },
+  {
+    "filePath": "golden/repository_inventory.json",
+    "symbol": "int",
+    "lineStart": 13,
+    "lineEnd": 13,
+    "matchReasons": [
+      "symbol: int",
+      "content keyword: int",
+      "content keyword: python",
+      "content keyword: pytest"
+    ],
+    "relevanceScore": 44
+  },
+  {
+    "filePath": "requirements.txt",
+    "matchReasons": [
+      "content keyword: pytest"
+    ],
+    "relevanceScore": 8
+  }
+]
