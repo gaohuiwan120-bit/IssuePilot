@@ -10,6 +10,8 @@
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test test/*.test.js",
+    "test:unit": "npm run build && node --test test/docker-unit.test.js test/permission-gate.test.js test/git-checkpoint.test.js test/runtime-recorder.test.js test/schema.test.js test/state-machine.test.js",
+    "test:docker": "npm run build && node --test test/docker-integration.test.js",
     "eval": "node eval/runner.mjs",
     "eval:offline": "node eval/runner.mjs --suite offline",
     "eval:e2e": "node eval/runner.mjs --suite e2e"

@@ -1,0 +1,29 @@
+{
+  "image": "issuepilot-node:local",
+  "workingDirectory": "/workspace",
+  "repositoryMountMode": "read-only",
+  "networkMode": "none",
+  "cpuLimit": 1,
+  "memoryLimitMb": 1024,
+  "pidsLimit": 128,
+  "timeoutMs": 120000,
+  "readOnlyRootFilesystem": true,
+  "runAsUser": "1000:1000",
+  "allowedEnvironmentVariables": [
+    "PATH",
+    "HOME",
+    "LANG",
+    "LC_ALL",
+    "NODE_ENV",
+    "CI",
+    "ISSUEPILOT_TASK_ID",
+    "PYTHONUNBUFFERED",
+    "PYTHONDONTWRITEBYTECODE"
+  ],
+  "writableDirectories": ["/tmp"],
+  "allowedImages": [
+    "issuepilot-node:local",
+    "issuepilot-python:local"
+  ],
+  "containerWorkspacePath": "/workspace"
+}
