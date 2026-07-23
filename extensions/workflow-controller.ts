@@ -1,6 +1,15 @@
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { mkdirSync, writeFileSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import {
+  createRuntimeState,
+  enterStage,
+  markInterrupted,
+  recordRetry,
+  DEFAULT_WORKFLOW_LIMITS,
+} from "../dist/workflow/runtime-control.js";
+import { createRunRecorder } from "../dist/trace/run-recorder.js";
+import type { WorkflowStage } from "../dist/workflow/stages.js";
 
 const NEXT: Record<string, string> = {
   understand: "inspect",
@@ -39,9 +48,13 @@ function save(cwd: string, s: object) {
 }
 
 export default function (pi: ExtensionAPI) {
+  let runtime = createRuntimeState("understand");
+
   pi.on("session_start", async (_, ctx) => {
     const s = load(ctx.cwd);
+    runtime = createRuntimeState(s.stage);
     (globalThis as any).__issuepilot_stage = s.stage;
+    (globalThis as any).__issuepilot_runtime = runtime;
     ctx.ui.setStatus("issuepilot", "Stage: " + s.stage);
   });
 
@@ -57,8 +70,31 @@ export default function (pi: ExtensionAPI) {
       if (s.stage === "checkpoint" && !s.checkpointCreated) {
         return ctx.ui.notify("Run /issuepilot-checkpoint first", "warning");
       }
+      const taskId =
+        (globalThis as any).__issuepilot_task_id ||
+        process.env.ISSUEPILOT_TASK_ID ||
+        "default";
+      const recorder = createRunRecorder(ctx.cwd, taskId);
+      const duration = recorder.markStageEnd(s.stage as WorkflowStage);
+      recorder.append({
+        stage: s.stage as WorkflowStage,
+        eventType: "stage_end",
+        success: true,
+        durationMs: duration,
+        summary: `leave ${s.stage}`,
+      });
+
+      runtime = enterStage(runtime, n as WorkflowStage);
+      (globalThis as any).__issuepilot_runtime = runtime;
       save(ctx.cwd, { ...s, stage: n });
       (globalThis as any).__issuepilot_stage = n;
+      recorder.markStageStart(n as WorkflowStage);
+      recorder.append({
+        stage: n as WorkflowStage,
+        eventType: "stage_start",
+        success: true,
+        summary: `enter ${n}`,
+      });
       ctx.ui.setStatus("issuepilot", "Stage: " + n);
       ctx.ui.notify("Advanced to " + n, "info");
     },
@@ -79,12 +115,39 @@ export default function (pi: ExtensionAPI) {
     description: "Retry after test failure (back to diagnose)",
     handler: async (_, ctx) => {
       const s = load(ctx.cwd);
+      const result = recordRetry(runtime, DEFAULT_WORKFLOW_LIMITS);
+      runtime = result.state;
+      (globalThis as any).__issuepilot_runtime = runtime;
+      if (!result.decision.allow) {
+        return ctx.ui.notify(result.decision.reason ?? "retry denied", "error");
+      }
       save(ctx.cwd, {
         ...s,
         stage: "diagnose",
         retryCount: (s.retryCount || 0) + 1,
       });
+      runtime = enterStage(runtime, "diagnose");
       ctx.ui.notify("Retry -> diagnose", "info");
+    },
+  });
+
+  pi.registerCommand("issuepilot-interrupt", {
+    description: "Mark workflow interrupted by user",
+    handler: async (_, ctx) => {
+      runtime = markInterrupted(runtime, "user interrupt");
+      (globalThis as any).__issuepilot_runtime = runtime;
+      const taskId =
+        (globalThis as any).__issuepilot_task_id ||
+        process.env.ISSUEPILOT_TASK_ID ||
+        "default";
+      createRunRecorder(ctx.cwd, taskId).append({
+        stage: (runtime.stage as WorkflowStage) || "failed",
+        eventType: "interrupt",
+        success: false,
+        summary: "user interrupt",
+        errorCode: "INTERRUPTED",
+      });
+      ctx.ui.notify("Interrupted", "warning");
     },
   });
 

@@ -1,5 +1,4 @@
-import type { WorkflowStage } from "../workflow/stages.js";
-import type { RiskLevel } from "../risk/levels.js";
+import type { PlanRiskLevel } from "../risk/levels.js";
 
 export type IssueType = "bug" | "feature" | "refactor" | "test" | "documentation";
 
@@ -10,6 +9,8 @@ export type VerificationStatus =
   | "conflicting";
 
 export type ReviewRecommendation = "keep_patch" | "retry" | "rollback";
+
+export type ApprovalStatus = "approved" | "rejected" | "expired" | "pending";
 
 export interface IssueSpec {
   taskId: string;
@@ -50,7 +51,6 @@ export interface ReproductionResult {
   failingTests: string[];
   failureReason: string | null;
   reproductionConfidence: number;
-  /** When reproduced is false, non-empty reason + evidence must be present to advance. */
   unreproducibleException?: boolean;
   exceptionEvidence?: string[];
 }
@@ -83,15 +83,22 @@ export interface RepairPlan {
   validationCommands: string[];
   acceptanceCriteria: string[];
   rollbackStrategy: string;
-  riskLevel: RiskLevel;
+  riskLevel: PlanRiskLevel;
   requiresApproval: boolean;
 }
 
+/** Operation-bound approval record (M2A). */
 export interface ApprovalDecision {
   taskId: string;
+  approvalId: string;
   approved: boolean;
+  status: ApprovalStatus;
   approvedBy: string | null;
-  approvedAt: string;
+  approvedAt: string | null;
+  expiresAt: string | null;
+  /** Stable hash of tool + normalized operation + params. */
+  operationHash: string;
+  operationSummary: string;
   approvedActions: string[];
   rejectedActions: string[];
   comment: string | null;
@@ -129,7 +136,6 @@ export interface ValidationResult {
   regressionTestsPassed: boolean;
   acceptanceCriteriaResults: Array<{ criterion: string; satisfied: boolean }>;
   overallPassed: boolean;
-  /** Must be true when validation commands were actually executed. */
   executed: boolean;
 }
 
@@ -147,7 +153,7 @@ export interface ReviewResult {
 
 export interface WorkflowSnapshot {
   taskId: string;
-  stage: WorkflowStage;
+  stage: import("../workflow/stages.js").WorkflowStage;
   artifacts: Partial<Record<string, string>>;
   updatedAt: string;
 }

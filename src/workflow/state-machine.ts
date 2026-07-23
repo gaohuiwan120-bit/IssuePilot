@@ -1,5 +1,5 @@
 import type { ArtifactName } from "../artifacts/names.js";
-import type { RiskLevel } from "../risk/levels.js";
+import type { PlanRiskLevel } from "../risk/levels.js";
 import {
   type ActiveStage,
   type StagePolicy,
@@ -20,7 +20,7 @@ export interface WorkflowState {
   /** Artifacts known to exist for this task. */
   presentArtifacts: ArtifactName[];
   approvalGranted: boolean;
-  planRiskLevel: RiskLevel | null;
+  planRiskLevel: PlanRiskLevel | null;
   checkpointCreated: boolean;
   patchProduced: boolean;
   validationExecuted: boolean;
@@ -64,7 +64,7 @@ export function markArtifact(state: WorkflowState, name: ArtifactName): Workflow
   };
 }
 
-export function setPlanRisk(state: WorkflowState, risk: RiskLevel): WorkflowState {
+export function setPlanRisk(state: WorkflowState, risk: PlanRiskLevel): WorkflowState {
   return {
     ...state,
     planRiskLevel: risk,

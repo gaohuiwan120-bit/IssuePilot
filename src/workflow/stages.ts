@@ -1,5 +1,5 @@
 import type { ArtifactName } from "../artifacts/names.js";
-import type { RiskLevel } from "../risk/levels.js";
+import type { PlanRiskLevel } from "../risk/levels.js";
 
 export const WORKFLOW_STAGES = [
   "understand",
@@ -186,6 +186,6 @@ export function stagePolicy(stage: ActiveStage): StagePolicy {
 }
 
 /** Risk levels that block checkpoint without approval. */
-export function planNeedsApproval(risk: RiskLevel): boolean {
+export function planNeedsApproval(risk: PlanRiskLevel): boolean {
   return risk === "medium" || risk === "high";
 }

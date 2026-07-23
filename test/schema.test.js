@@ -12,9 +12,10 @@ import {
 import { ARTIFACT_NAMES, REQUIRED_ARTIFACTS, OPTIONAL_ARTIFACTS } from "../dist/artifacts/names.js";
 
 describe("IssuePilot schema contracts", () => {
-  it("exports risk low|medium|high", () => {
-    assert.deepEqual([...RISK_LEVELS], ["low", "medium", "high"]);
+  it("exports risk low|medium|high|blocked", () => {
+    assert.deepEqual([...RISK_LEVELS], ["low", "medium", "high", "blocked"]);
     assert.equal(isRiskLevel("high"), true);
+    assert.equal(isRiskLevel("blocked"), true);
     assert.equal(isRiskLevel("DESTRUCTIVE"), false);
   });
 
