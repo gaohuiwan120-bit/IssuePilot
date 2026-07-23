@@ -7,5 +7,9 @@
     "../extensions/run-recorder.ts",
     "../extensions/issue-tools.ts"
   ],
-  "skills": []
+  "skills": [
+    "./skills/issue-analysis",
+    "./skills/safe-code-repair",
+    "./skills/patch-validation-review"
+  ]
 }

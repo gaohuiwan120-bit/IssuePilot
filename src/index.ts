@@ -12,3 +12,5 @@ export * from "./git/checkpoint.js";
 export * from "./trace/run-recorder.js";
 export * from "./docker/index.js";
 export * from "./tools/index.js";
+export * from "./config/load-env.js";
+export * from "./session/index.js";
