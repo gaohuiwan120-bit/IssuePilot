@@ -1,5 +1,7 @@
 # Pi Security Boundary & MLPilot 建议
 
+> **历史文档：** Phase 0 安全边界笔记，**不是**现行安装说明。现行容器与执行策略见 [`docs/container-security.md`](../container-security.md) 与 [`README.md`](../../README.md)。
+
 ## 核心结论
 
 **Project Trust ≠ Sandbox。** Pi 以启动用户权限运行，无 OS 级隔离。

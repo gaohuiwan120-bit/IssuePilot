@@ -1,5 +1,7 @@
 # Phase M2B Report — Docker Security Executor (validated)
 
+> **历史文档：** 阶段性验证报告（2026-07），**不是**现行安装说明。现行用法见 [`README.md`](../README.md)。
+
 Date: 2026-07-23  
 Branch: `feature/issuepilot-runtime`  
 Base: `issuepilot-m2a` (`3d29c1d`)

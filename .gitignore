@@ -2,11 +2,23 @@ node_modules/
 dist/
 coverage/
 outputs/
+*.log
+*.tmp
+
+# Local runtime data and secrets (never commit)
 .issuepilot/
 .env
 .env.*
 !.env.example
-*.log
-*.tmp
+.env.local
+.env.*.local
+
+# Local Pi settings (template remains tracked)
+.pi/settings.json
+
+# Private interview / resume notes (local only)
+docs/interview/
+
+# Local filesystem snapshots (not source of truth)
 archive/snapshots/
 fixtures/issues/.work/

@@ -1,12 +1,13 @@
 import { describe, it, before } from "node:test";
 import assert from "node:assert/strict";
-import { resolve, join } from "node:path";
+import { join } from "node:path";
 import { readFileSync, cpSync, mkdirSync, rmSync, existsSync } from "node:fs";
 import { detectDockerAvailability, imageExistsLocally } from "../dist/docker/availability.js";
 import { reproduceIssue } from "../dist/tools/reproduce-issue.js";
 import { runValidation } from "../dist/tools/run-validation.js";
+import { PROJECT_ROOT } from "./helpers/project-root.js";
 
-const ROOT = resolve("e:/AgentProject/pi_project/agent-projects/mlpilot");
+const ROOT = PROJECT_ROOT;
 const FIX = join(ROOT, "fixtures/issues");
 
 let dockerOk = false;

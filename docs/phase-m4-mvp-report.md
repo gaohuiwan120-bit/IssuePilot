@@ -1,5 +1,7 @@
 # Phase M3B + M4 MVP Report
 
+> **历史文档：** 阶段性交付报告，**不是**现行安装说明。现行用法见 [`README.md`](../README.md)。
+
 ## 范围
 
 Skills、模型配置、IssueOrchestrator 闭环、CLI、Mock 测试、Live E2E 门控、文档。  

@@ -1,7 +1,8 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, existsSync, rmSync, mkdirSync } from "node:fs";
-import { join, resolve } from "node:path";
+import { readFileSync, existsSync, rmSync, mkdirSync, mkdtempSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { resolveModelConfig, ModelConfigError } from "../dist/session/model-config.js";
 import { validateRepairPlan, createLlmAdapter, MockLlmAdapter } from "../dist/session/llm-adapter.js";
 import {
@@ -15,8 +16,9 @@ import { ApprovalService } from "../dist/security/approval.js";
 import { redactSummary } from "../dist/trace/run-recorder.js";
 import { authorizeToolCall, createRuntimeState, callKey, DEFAULT_WORKFLOW_LIMITS } from "../dist/workflow/runtime-control.js";
 import { assessToolCall } from "../dist/security/assess-risk.js";
+import { PROJECT_ROOT } from "./helpers/project-root.js";
 
-const ROOT = resolve("e:/AgentProject/pi_project/agent-projects/mlpilot");
+const ROOT = PROJECT_ROOT;
 const FIX = join(ROOT, "fixtures/issues");
 
 function mockExecutor(handler) {
@@ -61,11 +63,23 @@ describe("model configuration", () => {
   it("missing DeepSeek key errors clearly", () => {
     const prev = process.env.DEEPSEEK_API_KEY;
     delete process.env.DEEPSEEK_API_KEY;
-    assert.throws(
-      () => resolveModelConfig({ provider: "deepseek", requireLiveKey: true }),
-      (e) => e instanceof ModelConfigError && e.code === "MISSING_API_KEY",
-    );
-    if (prev !== undefined) process.env.DEEPSEEK_API_KEY = prev;
+    // Isolate from developer .env under project cwd (loadDotEnv would re-inject the key).
+    const isolatedCwd = mkdtempSync(join(tmpdir(), "issuepilot-nokey-"));
+    try {
+      assert.throws(
+        () =>
+          resolveModelConfig({
+            provider: "deepseek",
+            requireLiveKey: true,
+            cwd: isolatedCwd,
+          }),
+        (e) => e instanceof ModelConfigError && e.code === "MISSING_API_KEY",
+      );
+    } finally {
+      rmSync(isolatedCwd, { recursive: true, force: true });
+      if (prev !== undefined) process.env.DEEPSEEK_API_KEY = prev;
+      else delete process.env.DEEPSEEK_API_KEY;
+    }
   });
 
   it("logs must not leak API key patterns via redact", () => {

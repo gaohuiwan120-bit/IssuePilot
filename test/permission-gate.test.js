@@ -3,8 +3,9 @@ import assert from "node:assert/strict";
 import { assessToolCall, operationHash } from "../dist/security/assess-risk.js";
 import { ApprovalService } from "../dist/security/approval.js";
 import { normalizeCommand } from "../dist/security/normalize.js";
+import { PROJECT_ROOT } from "./helpers/project-root.js";
 
-const WS = "e:\\AgentProject\\pi_project\\agent-projects\\mlpilot";
+const WS = PROJECT_ROOT;
 
 describe("Permission Gate risk assessment", () => {
   it("1. allows low-risk read", () => {

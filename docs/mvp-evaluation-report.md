@@ -1,5 +1,6 @@
 # MVP Evaluation Report (2 Fixture cases)
 
+> **历史文档：** Fixture 评估记录，**不是**现行安装说明。现行用法见 [`README.md`](../README.md)。  
 > 本报告仅覆盖受控 Fixture 闭环，**不是**大规模 Benchmark，不得外推通用修复率。
 
 ## 环境

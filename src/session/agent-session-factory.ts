@@ -17,9 +17,33 @@ export interface CreateIssueAgentSessionOptions {
   cwd: string;
   provider?: string;
   model?: string;
+  /** When set, this session file is the only model context. */
+  sessionManager?: SessionManager;
 }
 
-export async function createIssueAgentSession(opts: CreateIssueAgentSessionOptions) {
+interface IssueAgentRuntime {
+  model: NonNullable<Awaited<ReturnType<typeof createAgentSession>>["session"]["model"]>;
+  authStorage: AuthStorage;
+  modelRegistry: ModelRegistry;
+  loader: DefaultResourceLoader;
+  modelSummary: Record<string, string>;
+}
+
+const runtimes = new Map<string, Promise<IssueAgentRuntime>>();
+
+export function getIssueAgentRuntime(opts: Omit<CreateIssueAgentSessionOptions, "sessionManager">): Promise<IssueAgentRuntime> {
+  const key = `${opts.cwd}\n${opts.provider ?? "deepseek"}\n${opts.model ?? ""}`;
+  const existing = runtimes.get(key);
+  if (existing) return existing;
+  const created = loadIssueAgentRuntime(opts).catch((error) => {
+    runtimes.delete(key);
+    throw error;
+  });
+  runtimes.set(key, created);
+  return created;
+}
+
+async function loadIssueAgentRuntime(opts: Omit<CreateIssueAgentSessionOptions, "sessionManager">): Promise<IssueAgentRuntime> {
   const cfg = resolveModelConfig({
     cwd: opts.cwd,
     provider: opts.provider ?? "deepseek",
@@ -56,18 +80,28 @@ export async function createIssueAgentSession(opts: CreateIssueAgentSessionOptio
     agentDir,
   });
   await loader.reload();
-
-  const { session } = await createAgentSession({
-    cwd: opts.cwd,
+  return {
     model,
     authStorage,
     modelRegistry,
-    sessionManager: SessionManager.inMemory(opts.cwd),
-    resourceLoader: loader,
+    loader,
+    modelSummary: modelConfigPublicSummary(cfg),
+  };
+}
+
+export async function createIssueAgentSession(opts: CreateIssueAgentSessionOptions) {
+  const runtime = await getIssueAgentRuntime(opts);
+  const { session } = await createAgentSession({
+    cwd: opts.cwd,
+    model: runtime.model,
+    authStorage: runtime.authStorage,
+    modelRegistry: runtime.modelRegistry,
+    sessionManager: opts.sessionManager ?? SessionManager.inMemory(opts.cwd),
+    resourceLoader: runtime.loader,
   });
 
   return {
     session,
-    modelSummary: modelConfigPublicSummary(cfg),
+    modelSummary: runtime.modelSummary,
   };
 }

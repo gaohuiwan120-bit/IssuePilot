@@ -1,5 +1,7 @@
 # Phase M3A Report — Deterministic Issue Toolchain
 
+> **历史文档：** 阶段性交付报告，**不是**现行安装说明。现行用法见 [`README.md`](../README.md)。
+
 ## 范围
 
 实现 8 个 Issue 业务工具 + 最小确定性诊断；Fixture；单元与真实 Docker 工具测试；文档。不接入真实 AgentSession / Skills / 自动改码 / 真实模型。

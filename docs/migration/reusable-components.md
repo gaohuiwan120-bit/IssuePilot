@@ -1,5 +1,7 @@
 # IssuePilot 可复用组件清单（Phase M0）
 
+> **历史文档：** 本文是 M0 阶段组件复用清单，**不是**现行安装说明。现行架构与启动方式见 [`README.md`](../../README.md) 与 [`docs/architecture.md`](../architecture.md)。
+
 > 范围：`agent-projects/mlpilot/`（不含 `node_modules/`、`dist/`）  
 > 复用判定：`直接复用` / `调整` / `重构` / `归档` / `删除` / `新增`  
 > 原则：未确认用途的文件不直接删除；优先归档。

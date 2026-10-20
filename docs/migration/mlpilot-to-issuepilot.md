@@ -1,10 +1,12 @@
 # MLPilot → IssuePilot 迁移设计（Phase M0）
 
+> **历史文档：** 本文是 2026-07 迁移设计记录，**不是**现行安装说明。现行依赖、环境与启动方式见仓库根目录 [`README.md`](../../README.md)。文中若出现本地 `file:../pi-upstream/...`，仅反映当时开发环境；当前通过 npm 使用 `@earendil-works/pi-coding-agent@0.80.6`。
+
 > 状态：M0 审查完成 → **M0.5 基线 + M1 契约迁移进行中/已落地**  
 > 审查日期：2026-07-23  
 > 基线路径：`agent-projects/mlpilot/`（物理目录名暂保留）  
 > 产品名：IssuePilot  
-> 上游依赖：`@earendil-works/pi-coding-agent`（本地 `file:../pi-upstream/packages/coding-agent`，版本 0.80.6）  
+> 上游依赖（历史）：`@earendil-works/pi-coding-agent`（本地 `file:../pi-upstream/packages/coding-agent`，版本 0.80.6）  
 > Git 基线说明：见 [`m0.5-git-baseline.md`](./m0.5-git-baseline.md)（上级空 `.git` 未删除；已建等效快照）
 
 ---

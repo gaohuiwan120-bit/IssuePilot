@@ -1,5 +1,7 @@
 # MLPilot Extension Points（Phase 0 设计映射）
 
+> **历史文档：** Phase 0 设计映射笔记，**不是**现行安装说明。现行扩展加载见 `.pi/settings.json.example` 与 [`README.md`](../../README.md)。
+
 未来 MLPilot 各模块应采用的 Pi 扩展机制。**Phase 0 仅设计，不实现业务。**
 
 ## 实现方式

@@ -1,12 +1,13 @@
 import { describe, it, before } from "node:test";
 import assert from "node:assert/strict";
-import { resolve, join } from "node:path";
+import { join } from "node:path";
 import { existsSync, readFileSync } from "node:fs";
 import { detectDockerAvailability, imageExistsLocally } from "../dist/docker/availability.js";
 import { DockerExecutor } from "../dist/docker/executor.js";
 import { DEFAULT_DOCKER_POLICY } from "../dist/docker/policy.js";
+import { PROJECT_ROOT } from "./helpers/project-root.js";
 
-const ROOT = resolve("e:/AgentProject/pi_project/agent-projects/mlpilot");
+const ROOT = PROJECT_ROOT;
 
 let dockerOk = false;
 let nodeImage = false;

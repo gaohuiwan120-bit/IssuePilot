@@ -18,9 +18,11 @@ import {
   DockerExecutor,
 } from "../dist/docker/executor.js";
 import { ApprovalService } from "../dist/security/approval.js";
+import { PROJECT_ROOT } from "./helpers/project-root.js";
 
-const REPO = resolve("e:/AgentProject/pi_project/agent-projects/mlpilot");
-const UPSTREAM = resolve("e:/AgentProject/pi_project/agent-projects/pi-upstream");
+const REPO = PROJECT_ROOT;
+/** Sibling path pattern used as a forbidden root (directory need not exist). */
+const UPSTREAM = resolve(REPO, "..", "pi-upstream");
 
 function baseReq(over = {}) {
   return {

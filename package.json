@@ -2,10 +2,13 @@
   "name": "issuepilot",
   "version": "0.1.0",
   "private": true,
-  "description": "IssuePilot: GitHub Issue repair and code review agent on Pi",
+  "description": "IssuePilot: AI Coding Agent for software engineering — free-form chat and controlled Issue repair",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=22.19.0"
+  },
   "bin": {
     "issuepilot": "./bin/issuepilot.mjs"
   },
@@ -17,12 +20,13 @@
     "test:docker": "npm run build && node --test test/docker-integration.test.js test/issue-tools-docker.test.js",
     "test:e2e-live": "npm run build && node --test test/e2e-live.test.js",
     "issuepilot": "npm run build && node bin/issuepilot.mjs",
+    "chat": "npm run build && node dist/chat/server.js",
     "eval": "node eval/runner.mjs",
     "eval:offline": "node eval/runner.mjs --suite offline",
     "eval:e2e": "node eval/runner.mjs --suite e2e"
   },
   "dependencies": {
-    "@earendil-works/pi-coding-agent": "file:../pi-upstream/packages/coding-agent",
+    "@earendil-works/pi-coding-agent": "0.80.6",
     "typebox": "1.1.38"
   },
   "devDependencies": {

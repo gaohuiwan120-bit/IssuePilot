@@ -10,7 +10,7 @@ import {
   cpSync,
   rmSync,
 } from "node:fs";
-import { join, resolve } from "node:path";
+import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { execSync } from "node:child_process";
 import { parseIssue } from "../dist/tools/parse-issue.js";
@@ -26,8 +26,9 @@ import { DockerExecutor } from "../dist/docker/executor.js";
 import { DEFAULT_DOCKER_POLICY } from "../dist/docker/policy.js";
 import { DockerExecutionError } from "../dist/docker/types.js";
 import { IssueToolError } from "../dist/tools/errors.js";
+import { PROJECT_ROOT } from "./helpers/project-root.js";
 
-const ROOT = resolve("e:/AgentProject/pi_project/agent-projects/mlpilot");
+const ROOT = PROJECT_ROOT;
 const FIX = join(ROOT, "fixtures/issues");
 
 function mockExecutor(handler, outputsRoot) {
